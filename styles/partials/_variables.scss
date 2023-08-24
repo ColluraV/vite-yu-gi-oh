@@ -1,0 +1,41 @@
+
+main {
+    min-width: 320px;
+    background-image: url(https://img.yugioh-card.com/eu/wp-content/uploads/2022/09/OTS-hero-banner-v02.webp);
+    background-size: contain;
+    background-position: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .container{
+        box-shadow: -10px 10px 60px #000000,
+                    -10px -10px  80px #000000,
+                     10px  10px 60px #000000,
+                    -10px  10px 80px #000000;
+        background-color: rgba(218, 165, 32, 0.85);
+        padding:40px;
+
+    }
+}
+
+.background_yugi {
+    background-image: url(https://images5.alphacoders.com/967/967270.png);
+    width: 100%;
+    background-size: cover;
+    max-height: 500px;
+    height: 50vh;
+    background-position: center;
+}
+
+#logo_main {
+    height: 50vh;
+    max-height: 500px;
+    object-fit: cover;
+    image-resolution: initial;
+    margin: 0;
+    min-width: 470px;
+}
+
+.card{
+    border: 2px solid rgba(0, 0, 0, 0.681);
+    box-shadow: 10px 10px 5px #00000082;
+}

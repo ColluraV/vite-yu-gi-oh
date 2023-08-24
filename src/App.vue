@@ -15,8 +15,8 @@ export default {
 <template>
   <TheHeader></TheHeader>
 
-  <main>
-    <div class="container">
+  <main class="">
+    <div class="container text-center">
       <h1>Elenco Carte</h1>
       
       <CardsList/>
@@ -26,6 +26,7 @@ export default {
   <TheFooter></TheFooter>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
+@use "../styles/partials/variables" as *;
 
 </style>
