@@ -11,14 +11,14 @@ export default {
 
 <template>
   <div class="card h-100">
-    <img :src="OneCard.image" class="card-img-top" alt="..." />
+    <img :src="OneCard.card_images[0].image_url" class="card-img-top" alt="..." />
     <div class="card-body d-flex flex-column">
       <h5 class="card-title">{{ OneCard.name }}</h5>
       <p class="card-text">
-        Stato: {{ OneCard.Type }} <br />
+        Stato: {{ OneCard.type }} <br />
         Specie: {{ OneCard.race }}
       </p>
-      <a :href="OneCard.url" class="btn btn-primary mt-auto">Dettagli</a>
+
     </div>
   </div>
 </template>

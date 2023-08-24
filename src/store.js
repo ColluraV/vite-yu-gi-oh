@@ -21,13 +21,13 @@ export const store = reactive({
 
 
 
-export function cardPicker(nextUrl){
+export function cardPicker(){
 
-    const url = nextUrl ? nextUrl : "https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0"
+    const url = "https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0"
 
     axios.get(url).then((response) => {
-        debugger
-        store.cards.push(...response.data);
+
+        store.cards=(response.data.data);
        /* store.pagesInfo = response.data.info;*/
         
     })
