@@ -34,7 +34,7 @@ export default {
             </option>
 
         </select>
-        <input type="submit" @click="cardPicker">
+        <input type="submit" @click="[cardPicker(), store.CurrentPage=1]">
     </form>
 </template>
 
