@@ -15,7 +15,7 @@
         },
     
         mounted(){
-            cardPicker();
+            cardPicker(store.selectedArchetype);
         }
 
     }

@@ -1,5 +1,6 @@
 <script>
-import { store, archetypePicker } from "../store.js"
+import { store, archetypePicker,cardPicker,archetypeSelect } from "../store.js"
+ 
 
 export default {
     data() {
@@ -8,7 +9,10 @@ export default {
         };
     },
     methods: {
-        archetypePicker
+        archetypePicker,
+        cardPicker,
+        archetypeSelect,
+        
     },
     mounted() {
         archetypePicker()
@@ -18,10 +22,10 @@ export default {
 </script>
 
 <template>
-    <form @submit="">
+    <form @submit.prevent="archetypeSelect">
         <label for="Arch_list"> Choose Your Archetype </label>
         
-        <select id="Arch_list"> <!-- //////////////////selezione archetipo////////////////// -->
+        <select id="Arch_list" v-model="store.selectedArchetype" > <!-- //////////////////selezione archetipo////////////////// -->
             <option :value="archetype.archetype_name"
                     v-for="archetype in store.Archetypes">
                     
@@ -30,7 +34,7 @@ export default {
             </option>
 
         </select>
-        <input type="submit">
+        <input type="submit" @click="cardPicker">
     </form>
 </template>
 
