@@ -2,8 +2,9 @@ import axios from "axios";
 import { reactive } from "vue";
 
 export const store = reactive({
-    searchText: "",
+    /*searchText: "",*/
     cards:[],
+    Archetypes:[],
     
         
     })
@@ -29,6 +30,18 @@ export function cardPicker(){
         store.cards=(response.data.data);
        /* store.pagesInfo = response.data.info;*/
         
-    })
+    });
+};
 
-}
+export function archetypePicker(){
+
+    const url = "https://db.ygoprodeck.com/api/v7/archetypes.php"
+
+    axios.get(url).then((response) => {
+
+        store.Archetypes=(response.data);
+
+    });
+};
+
+

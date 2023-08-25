@@ -2,12 +2,14 @@
 import TheHeader from './components/TheHeader.vue';
 import TheFooter from './components/TheFooter.vue';
 import CardsList from './components/CardsList.vue';
+import FilteredArchetype from './components/FilteredArchetype.vue';
 
 export default {
   components: {
     TheHeader,
     TheFooter,
-    CardsList
+    CardsList,
+    FilteredArchetype,
   }
 }
 </script>
@@ -18,7 +20,7 @@ export default {
   <main class="">
     <div class="container text-center">
       <h1>Elenco Carte</h1>
-      
+      <FilteredArchetype/>
       <CardsList/>
     </div>
   </main>
